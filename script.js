@@ -1,17 +1,10 @@
-const button = document.getElementByld("toggleButton");
-const status = document.getElementByld("status");
+const btn = document.getElementById ("toggleButton");
+const stat = document.getElementById ("status");
+let ON = false
 
-let isOn = false
-
-button.addeventListener("click",function(){isOn=!isOn;
-    
-    if(isOn){
-        button.textContent = "Turn OFF";
-        status.textContent = "Status:ON";
-        status.style.color = "green";
-    }else{
-        button.textContent = "Turn ON"
-        status.textcontent = "status:OFF";
-        status.style.color = "red";
-    }
-})
+btn.onclick = function() {
+    ON=!ON;
+      btn.textContent = ON ? "Turn OFF" : "Turn ON";
+        stat.textContent = ON ? "Status:ON" : "Status:OFF";
+        stat.style.color = ON ? "green" : "red"; 
+    };
